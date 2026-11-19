@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clare"
+version = "0.2.0"
+description = "Audit a movie backup library for low-quality copies, duplicates and bad file names"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["rich>=13.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+clare = "clare.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["clare*"]
